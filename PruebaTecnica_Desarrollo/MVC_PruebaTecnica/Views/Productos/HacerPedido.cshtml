@@ -1,0 +1,27 @@
+﻿@model MVC_PruebaTecnica.Models.Producto
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>HacerPedido</title>
+</head>
+<body>
+    <h2>Hacer Pedido</h2>
+
+    @using (Html.BeginForm("HacerPedido", "Productos"))
+    {
+        <label>Producto: @Model.Nombre</label>
+        <br />
+        <label>Cantidad:</label>
+        @Html.TextBox("cantidad")
+        <br />
+        <input type="hidden" name="id" value="@Model.Id" />
+        <input type="submit" value="Hacer Pedido" />
+    }
+</body>
+</html>

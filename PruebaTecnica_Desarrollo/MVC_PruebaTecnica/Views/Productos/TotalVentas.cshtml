@@ -1,0 +1,28 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+<!DOCTYPE html>
+<link href="@Url.Content("~/Content/bootstrap.min.css")" rel="stylesheet" />
+<script src="@Url.Content("~/Scripts/bootstrap.min.js")"></script>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>TotalVentas</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="alert alert-success">
+                    <h4>Total de Ventas:</h4>
+                    <p>@ViewBag.TotalVentas</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

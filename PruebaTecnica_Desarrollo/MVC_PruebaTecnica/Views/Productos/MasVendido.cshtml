@@ -1,0 +1,38 @@
+﻿@model MVC_PruebaTecnica.Models.Producto
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+<!DOCTYPE html>
+<link href="@Url.Content("~/Content/bootstrap.min.css")" rel="stylesheet" />
+<script src="@Url.Content("~/Scripts/bootstrap.min.js")"></script>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>MasVendido</title>
+</head>
+<body>
+    <h2>Producto Más Vendido</h2>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <table class="table table-bordered">
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Tipo</th>
+                        <th>Cantidad Vendida</th>
+                    </tr>
+                    <tr>
+                        <td>@Model.Nombre</td>
+                        <td>@Model.Tipo</td>
+                        <td>@Model.CantidadVendida</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
